@@ -1,1 +1,2 @@
-cd src && flask run --debug -p 8080
+cd src
+flask run --debug -p 8080
