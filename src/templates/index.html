@@ -1,0 +1,43 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>catpad</title>
+    <link rel="shortcut icon" href="{{url_for('static',filename='imgs/favicon.ico')}}" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles/normalize.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles/pico.min.css')}}">
+    <style>
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        body {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="container">
+        <hgroup>
+            <h1>
+                <a href="http://github.com/kkrriisssshh/catpad">catpad</a>
+            </h1>
+            <p>
+                minimal note-taking
+            </p>
+        </hgroup>
+    </header>
+    <form action="/notes" method="post">
+        <div class="container">
+            <label for="title">title:</label>
+            <textarea id="title" style="resize: none;" rows="1" name="title" placeholder="write a title..."></textarea>
+            <label for="note">note:</label>
+            <textarea id="note" style="resize: none;" rows="18" name="note" placeholder="write a note..."
+                aria-label="new note"></textarea>
+            <input type="submit" value="[+] save"> 
+        </div>
+    </form>
+</body>
